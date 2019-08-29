@@ -16,11 +16,14 @@ This fork is made for the legacy project which depends on Kintone Utility. Becau
 ### npm library
 This library is published as npm library at [npmjs.com](https://npmjs.com) for using from your bundle systems such as Webpack.
 
-1. Add `kintone-utility` into your package dependencies.
+At first, add `kintone-utility` into your package dependencies:
+
 ```console
 > yarn add @shuuji3/kintone-utility
 ```
-2. Use `kintone-utility` from your project like following.
+
+Then, use `kintone-utility` from your project like the following:
+
 ```js
 // main.js
 import kintoneUtility from 'kintone-utility';
