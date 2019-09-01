@@ -53,7 +53,7 @@ As the library is published as npm library, you can use [unpkg](https://unpkg.co
 3. You can use the `kintoneUtility` object on your code!
 
 ## Documentation
-[kintoneUtility.rest](./guides/rest_doc.md)
+[kintone-utility Documentation](./docs/index.md)
 
 Additionally, I'd like to recommend to read API Docs on [Kintone Developer Program](https://developer.kintone.io/hc/en-us).
 

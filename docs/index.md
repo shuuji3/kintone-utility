@@ -1,6 +1,8 @@
-# kintoneUtility.rest Specification
+# kintone-utility Documentation
 
-## Record
+## Table of Contents
+
+### Record
 * [kintoneUtility.rest.getRecord](#getRecord)
 * [kintoneUtility.rest.getRecords](#getRecords)
 * [kintoneUtility.rest.getAllRecordsByQuery](#getAllRecordsByQuery)
@@ -18,7 +20,7 @@
 * [kintoneUtility.rest.downloadFile](#downloadFile)
 * [kintoneUtility.rest.uploadFile](#uploadFile)
 
-## App
+### App
 * [kintoneUtility.rest.getFormFields](#getFormFields)
 * [kintoneUtility.rest.getFormLayout](#getFormLayout)
 * [kintoneUtility.rest.postDeployAppSettings](#postDeployAppSettings)
@@ -26,7 +28,7 @@
 * [kintoneUtility.rest.getCustomization](#getCustomization)
 * [kintoneUtility.rest.updateCustomization](#updateCustomization)
 
-## Authentication
+### Authentication
 * [kintoneUtility.rest.setUserAuth](#setUserAuth)
 * [kintoneUtility.rest.setApiTokenAuth](#setApiTokenAuth)
 * [kintoneUtility.rest.setDomain](#setDomain)
@@ -38,7 +40,14 @@
 * [kintoneUtility.rest.clearBasicAuth](#clearBasicAuth)
 * [kintoneUtility.rest.clearGuestSpaceId](#clearGuestSpaceId)  
 
-## <a name="getRecord"> kintoneUtility.rest.getRecord(param)
+### Cursor
+* [kintoneUtility.rest.postCursor](#postCursor)
+* [kintoneUtility.rest.getCursor](#getCursor)
+* [kintoneUtility.rest.deleteCursor](#deleteCursor)
+
+## Record
+
+### <a name="getRecord"> kintoneUtility.rest.getRecord(param)
 * Get a single record.
 
 #### Parameter 
@@ -54,7 +63,8 @@
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.getRecord({
   app: 542,
@@ -67,7 +77,7 @@ kintoneUtility.rest.getRecord({
 });
 ```
 
-## <a name="getRecords"> kintoneUtility.rest.getRecords(param)
+### <a name="getRecords"> kintoneUtility.rest.getRecords(param)
 * Get multiple records.
 * The maximum number of records that can be retrieved is 500.
 
@@ -86,7 +96,8 @@ kintoneUtility.rest.getRecord({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.getRecords({
   app: 542,
@@ -101,7 +112,7 @@ kintoneUtility.rest.getRecords({
 });
 ```
 
-## <a name="getAllRecordsByQuery"> kintoneUtility.rest.getAllRecordsByQuery(param)
+### <a name="getAllRecordsByQuery"> kintoneUtility.rest.getAllRecordsByQuery(param)
 * Get all records indicated by query.
 * Can't indicate limit and offset of query.
 
@@ -119,7 +130,8 @@ kintoneUtility.rest.getRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.getAllRecordsByQuery({
   app: 542,
@@ -133,7 +145,7 @@ kintoneUtility.rest.getAllRecordsByQuery({
 });
 ```
 
-## <a name="postRecord"> kintoneUtility.rest.postRecord(param)
+### <a name="postRecord"> kintoneUtility.rest.postRecord(param)
 * Insert a record to kintone app.
 
 #### Parameter 
@@ -149,9 +161,10 @@ kintoneUtility.rest.getAllRecordsByQuery({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var record = {
+const record = {
   Number: {
     value: 1234
   },
@@ -170,7 +183,7 @@ kintoneUtility.rest.postRecord({
 });
 ```
 
-## <a name="postRecords"> kintoneUtility.rest.postRecords(param)
+### <a name="postRecords"> kintoneUtility.rest.postRecords(param)
 * **Insert up to 2000 records to kintone app.**
 * **If the records are over 2000, It is thrown Error.**
 * **If request is failed, no record is inserted.**
@@ -188,9 +201,10 @@ kintoneUtility.rest.postRecord({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var records = [
+const records = [
   {
     Number: {
       value: 1234
@@ -219,7 +233,7 @@ kintoneUtility.rest.postRecords({
 });
 ```
 
-## <a name="postAllRecords"> kintoneUtility.rest.postAllRecords(param)
+### <a name="postAllRecords"> kintoneUtility.rest.postAllRecords(param)
 * **Can insert over 2000 records to kintone app, but can't do rollback.**
 
 #### Parameter 
@@ -235,9 +249,10 @@ kintoneUtility.rest.postRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var records = [
+const records = [
   {
     Number: {
       value: 1234
@@ -266,7 +281,7 @@ kintoneUtility.rest.postAllRecords({
 });
 ```
 
-## <a name="putRecord"> kintoneUtility.rest.putRecord(param)
+### <a name="putRecord"> kintoneUtility.rest.putRecord(param)
 * Update a record to kintone app.
 
 #### Parameter 
@@ -287,9 +302,10 @@ kintoneUtility.rest.postAllRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var record = {
+const record = {
   Number: {
     value: 1234
   },
@@ -324,7 +340,7 @@ kintoneUtility.rest.putRecord({
 });
 ```
 
-## <a name="putRecords"> kintoneUtility.rest.putRecords(param)
+### <a name="putRecords"> kintoneUtility.rest.putRecords(param)
 * **Update up to 2000 records to kintone app.**
 * **If the records are over 2000, It is thrown Error.**
 * **If request is failed, no record is Updated.**
@@ -342,9 +358,10 @@ kintoneUtility.rest.putRecord({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var records = [
+const records = [
   {
     id: 18616,
     record: {
@@ -379,7 +396,7 @@ kintoneUtility.rest.putRecords({
 });
 ```
 
-## <a name="putAllRecords"> kintoneUtility.rest.putAllRecords(param)
+### <a name="putAllRecords"> kintoneUtility.rest.putAllRecords(param)
 * **Can update over 2000 records to kintone app, but can't do rollback.**
 
 #### Parameter 
@@ -395,9 +412,10 @@ kintoneUtility.rest.putRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var records = [
+const records = [
   {
     updateKey: {
       field: 'unique_field_code',
@@ -438,7 +456,7 @@ kintoneUtility.rest.putAllRecords({
 });
 ```
 
-## <a name="deleteRecords"> kintoneUtility.rest.deleteRecords(param)
+### <a name="deleteRecords"> kintoneUtility.rest.deleteRecords(param)
 * **Can't delete over 2000 records.**
 * **If the records are over 2000, It is thrown Error.**
 * **If request is failed, no record is deleted.**
@@ -457,9 +475,10 @@ kintoneUtility.rest.putAllRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var ids = [
+const ids = [
   18619,
   18618
 ];
@@ -474,7 +493,7 @@ kintoneUtility.rest.deleteRecords({
 });
 ```
 
-## <a name="deleteAllRecords"> kintoneUtility.rest.deleteAllRecords(param)
+### <a name="deleteAllRecords"> kintoneUtility.rest.deleteAllRecords(param)
 * Delete all records by indicating query.
 * **Can delete over 2000 records, but can't do rollback.**
 
@@ -491,9 +510,10 @@ kintoneUtility.rest.deleteRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var ids = [
+const ids = [
   18619,
   18618
 ];
@@ -508,7 +528,7 @@ kintoneUtility.rest.deleteAllRecords({
 });
 ```
 
-## <a name="deleteAllRecordsByQuery"> kintoneUtility.rest.deleteAllRecordsByQuery(param)
+### <a name="deleteAllRecordsByQuery"> kintoneUtility.rest.deleteAllRecordsByQuery(param)
 * Can delete over 2000 records, but can't do rollback.
 
 #### Parameter 
@@ -524,7 +544,8 @@ kintoneUtility.rest.deleteAllRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.deleteAllRecordsByQuery({
   app: 542,
@@ -537,7 +558,7 @@ kintoneUtility.rest.deleteAllRecordsByQuery({
 });
 ```
 
-## <a name="upsertRecord"> kintoneUtility.rest.upsertRecord(param)
+### <a name="upsertRecord"> kintoneUtility.rest.upsertRecord(param)
 * Insert or update a record to kintone app.
 * Insert the record if the updateKey doesn't exists.
 * Update the record if the updateKey exists.
@@ -559,9 +580,10 @@ kintoneUtility.rest.deleteAllRecordsByQuery({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var record = {
+const record = {
   Number: {
     value: 1234
   }
@@ -580,7 +602,7 @@ kintoneUtility.rest.upsertRecord({
 });;
 ```
 
-## <a name="upsertRecords"> kintoneUtility.rest.upsertRecords(param)
+### <a name="upsertRecords"> kintoneUtility.rest.upsertRecords(param)
 * insert or update up to 1500 records to kintone app.
 * If the records are over 1500, It is thrown Error.
 * Insert the records if the updateKey doesn't exists.
@@ -599,9 +621,10 @@ kintoneUtility.rest.upsertRecord({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
-var records = [
+const records = [
   {
     updateKey: {
       field: 'String',
@@ -636,7 +659,7 @@ kintoneUtility.rest.upsertRecords({
 });
 ```
 
-## <a name="downloadFile"> kintoneUtility.rest.downloadFile(param)
+### <a name="downloadFile"> kintoneUtility.rest.downloadFile(param)
 * Download a file attached to record.
 * You can get file key by "kintoneUtility.rest.getRecord" or "kintoneUtility.rest.getRecords".
 
@@ -652,7 +675,8 @@ kintoneUtility.rest.upsertRecords({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.downloadFile({
   fileKey: '20170403061310F33E961E5B7C43079759269996409F50150',
@@ -664,7 +688,7 @@ kintoneUtility.rest.downloadFile({
 });
 ```
 
-## <a name="uploadFile"> kintoneUtility.rest.uploadFile(param)
+### <a name="uploadFile"> kintoneUtility.rest.uploadFile(param)
 * Upload a file to kintone.
 * Should specify Blob format data.
 
@@ -681,7 +705,8 @@ kintoneUtility.rest.downloadFile({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.uploadFile({
   fileName: 'sample.txt',
@@ -694,7 +719,9 @@ kintoneUtility.rest.uploadFile({
 });
 ```
 
-## <a name="getFormFields"> kintoneUtility.rest.getFormFields(param)
+## App
+
+### <a name="getFormFields"> kintoneUtility.rest.getFormFields(param)
 * Get the list of fields and field settings of an App.
 
 #### Parameter 
@@ -711,7 +738,8 @@ kintoneUtility.rest.uploadFile({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.getFormFields({
   app: 542,
@@ -725,7 +753,7 @@ kintoneUtility.rest.getFormFields({
 });
 ```
 
-## <a name="getFormLayout"> kintoneUtility.rest.getFormLayout(param)
+### <a name="getFormLayout"> kintoneUtility.rest.getFormLayout(param)
 * Get the field layout info of a form in an App.
 
 #### Parameter 
@@ -741,7 +769,8 @@ kintoneUtility.rest.getFormFields({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.getFormLayout({
   app: 542,
@@ -754,7 +783,7 @@ kintoneUtility.rest.getFormLayout({
 });
 ```
 
-## <a name="postDeployAppSettings"> kintoneUtility.rest.postDeployAppSettings(param)
+### <a name="postDeployAppSettings"> kintoneUtility.rest.postDeployAppSettings(param)
 * Deploy the apps to the production environments.
 
 #### Parameter
@@ -773,7 +802,8 @@ kintoneUtility.rest.getFormLayout({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.postDeployAppSettings({
   apps: [
@@ -786,7 +816,7 @@ kintoneUtility.rest.postDeployAppSettings({
 });
 ```
 
-## <a name="getAppDeployStatus"> kintoneUtility.rest.getAppDeployStatus(param)
+### <a name="getAppDeployStatus"> kintoneUtility.rest.getAppDeployStatus(param)
 * Get the status of the deployments of the apps.
 
 #### Parameter
@@ -801,7 +831,8 @@ kintoneUtility.rest.postDeployAppSettings({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.getAppDeployStatus({
   apps: [ 542 ],
@@ -812,7 +843,7 @@ kintoneUtility.rest.getAppDeployStatus({
 });
 ```
 
-## <a name="getCustomization"> kintoneUtility.rest.getCustomization(param)
+### <a name="getCustomization"> kintoneUtility.rest.getCustomization(param)
 * Gets the JavaScript and CSS Customization settings of an App.
 
 #### Parameter
@@ -828,7 +859,8 @@ kintoneUtility.rest.getAppDeployStatus({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.getCustomization({
   app: 542,
@@ -839,7 +871,7 @@ kintoneUtility.rest.getCustomization({
 });
 ```
 
-## <a name="updateCustomization"> kintoneUtility.rest.updateCustomization(param)
+### <a name="updateCustomization"> kintoneUtility.rest.updateCustomization(param)
 * Updates the JavaScript and CSS Customization settings of an App.
 
 #### Parameter
@@ -873,7 +905,8 @@ kintoneUtility.rest.getCustomization({
 ```
 Promise Object
 ```
-#### Sample
+
+#### Example
 ```js
 kintoneUtility.rest.updateCustomization({
   app: 542,
@@ -898,7 +931,9 @@ kintoneUtility.rest.updateCustomization({
 });
 ```
 
-## <a name="setUserAuth"> kintoneUtility.rest.setUserAuth(loginName, password)
+## Authentication
+
+### <a name="setUserAuth"> kintoneUtility.rest.setUserAuth(loginName, password)
 * Specify login name and password when execute API except for user logged in to kintone.
 
 #### Parameter 
@@ -909,16 +944,14 @@ kintoneUtility.rest.updateCustomization({
 | password | String | Yes | The password for user authentication.
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.setUserAuth('loginName', 'password');
 ```
 
-## <a name="setApiTokenAuth"> kintoneUtility.rest.setApiTokenAuth(apiToken)
+### <a name="setApiTokenAuth"> kintoneUtility.rest.setApiTokenAuth(apiToken)
 * Specify API token when you need to execute API by token.
 
 #### Parameter 
@@ -928,16 +961,14 @@ kintoneUtility.rest.setUserAuth('loginName', 'password');
 | apiToken | String | Yes | The API Token that will be created by app. 
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.setApiTokenAuth('vZCkStSK3SD7zyHh17auyRrBJajjFrVaffit738');
 ```
 
-## <a name="setDomain"> kintoneUtility.rest.setDomain(domain)
+### <a name="setDomain"> kintoneUtility.rest.setDomain(domain)
 * Specify the domain when you need.
 * In many cases it is not necessary.
 
@@ -948,16 +979,14 @@ kintoneUtility.rest.setApiTokenAuth('vZCkStSK3SD7zyHh17auyRrBJajjFrVaffit738');
 | domain | String | Yes | Your kintone's domain. (e.g. 'sample.cybozu.com')
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.setDomain('sample.cybozu.com');
 ```
 
-## <a name="setBasicAuth"> kintoneUtility.rest.setBasicAuth(userName, password)
+### <a name="setBasicAuth"> kintoneUtility.rest.setBasicAuth(userName, password)
 * Specify user name and password for basic authentication when you need.
 * In many cases it is not necessary.
 
@@ -969,16 +998,14 @@ kintoneUtility.rest.setDomain('sample.cybozu.com');
 | password | String | Yes | The password for basic authentication.
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.setBasicAuth('userName', 'password');
 ```
 
-## <a name="setGuestSpaceId"> kintoneUtility.rest.setGuestSpaceId(guestSpaceId)
+### <a name="setGuestSpaceId"> kintoneUtility.rest.setGuestSpaceId(guestSpaceId)
 * Can specify guest space ID.
 * isGuest parameter is not necessary when you use "kintoneUtility.rest.setGuestSpaceId".
 
@@ -989,101 +1016,165 @@ kintoneUtility.rest.setBasicAuth('userName', 'password');
 | guestSpaceId | Number | Yes | The guest space ID to which the application belongs.
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.setGuestSpaceId('12');
 ```
 
-## <a name="clearUserAuth"> kintoneUtility.rest.clearUserAuth()
+### <a name="clearUserAuth"> kintoneUtility.rest.clearUserAuth()
 * Clear the info that you set by "kintoneUtility.rest.setUserAuth".
 
 #### Parameter 
-```
 None
-```
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.clearUserAuth();
 ```
 
-## <a name="clearApiTokenAuth"> kintoneUtility.rest.clearApiTokenAuth()
+### <a name="clearApiTokenAuth"> kintoneUtility.rest.clearApiTokenAuth()
 * Clear the info that you set by "kintoneUtility.rest.setApiTokenAuth".
 
 #### Parameter 
-```
 None
-```
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.clearApiTokenAuth();
 ```
 
-## <a name="clearDomain"> kintoneUtility.rest.clearDomain()
+### <a name="clearDomain"> kintoneUtility.rest.clearDomain()
 * Clear the info that you set by "kintoneUtility.rest.setDomain".
 
 #### Parameter 
-```
 None
-```
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.clearDomain();
 ```
 
-## <a name="clearBasicAuth"> kintoneUtility.rest.clearBasicAuth()
+### <a name="clearBasicAuth"> kintoneUtility.rest.clearBasicAuth()
 * Clear the info that you set by "kintoneUtility.rest.setBasicAuth".
 
 #### Parameter 
-```
 None
-```
 
 #### Response
-```
 None
-```
 
-#### Sample
+#### Example
 ```js
 kintoneUtility.rest.clearBasicAuth();
 ```
 
-## <a name="clearGuestSpaceId"> kintoneUtility.rest.clearGuestSpaceId()
+### <a name="clearGuestSpaceId"> kintoneUtility.rest.clearGuestSpaceId()
 * Clear the info that you set by "kintoneUtility.rest.setGuestSpaceId".
 
 #### Parameter 
-```
 None
+
+#### Response
+None
+
+#### Example
+```js
+kintoneUtility.rest.clearGuestSpaceId();
 ```
+
+## Cursor
+
+### <a name="postCursor"> kintoneUtility.rest.postCursor(params)
+Creates a database cursor to fetch records to which the query matches.
+
+#### Parameter 
+| Name | Data type | Required | Description
+|:-----------|:------------:|:------------:|:------------
+| param | Object | Yes |  |
+| param.app | Number | Yes | The App ID to fetch records.
+| param.query | String | Optional | The query string to specify the condition of the records to fetch. If not specified, all accessible records will be returned.<br>[The detail of the query](https://developer.kintone.io/hc/en-us/articles/213149287/)<br>You cannot include **limit** and **offset** in the query on this method.
+| param.fields | Array<String> | Optional | The field codes that you want to be included in the record of the response. If not specified, all accessible fields will be returned.
+| param.isGuest | Boolean | Optional | Set to `true` if the app belongs to a guest space. (Default: `false`) 
 
 #### Response
 ```
-None
+Promise<{id: String , totalCount: String}>
 ```
 
-#### Sample
+- `id`: The cursor id corresponding this request.
+- `totalCount`: The string representation of the number of records matched to the query. You can fetch this number of records from the cursor. (Note that the type is `String` not `Number` i.e. `"12345"` not `12345`)
+
+#### Example
 ```js
-kintoneUtility.rest.clearGuestSpaceId();
+const { id, totalCount } = await kintoneUtility.rest.postCursor({
+  id: 1234,
+  query: 'count >= 1000',
+  fields: ['name', 'quality', 'count'],
+});
+
+console.log(`cursor id: ${id}`);
+console.log(`totalCount: ${totalCount}`);
+```
+
+### <a name="getCursor"> kintoneUtility.rest.getCursor(params)
+Get records using the cursor created by `postCursor()`.
+
+#### Parameter 
+| Name | Data type | Required | Description
+|:-----------|:------------:|:------------:|:------------
+| param | Object | Yes |  |
+| param.id | String | Yes | The cursor ID to fetch records.
+| param.isGuest | Boolean | Optional | Set to `true` if the app belongs to a guest space. (Default: `false`) 
+
+#### Response
+```
+Promise<{records: object[]}>
+```
+
+#### Example
+```js
+const { records } = kintoneUtility.rest.postCursor({
+  id: 1234,
+  query: 'count >= 1000',
+  fields: ['name', 'quality', 'count'],
+});
+records.foreach(console.log);
+```
+
+### <a name="deleteCursor"> kintoneUtility.rest.deleteCursor(params)
+Delete the cursor created by `postCursor()`.
+
+Note that you must not delete the cursor
+from which you've fetched all records.
+Because that cursor is deleted automatically on the server
+and trying to delete it resulted in throwing an exception.
+So you must check the number of records you've already fetched
+to confirm the deletion of the cursor or wait for 10 minutes
+for its expiration. 
+This is a specification of the Kintone platform.
+
+#### Parameter 
+| Name | Data type | Required | Description
+|:-----------|:------------:|:------------:|:------------
+| param | Object | Yes |  |
+| param.id | String | Yes | The cursor ID to fetch records.
+| param.isGuest | Boolean | Optional | Set to `true` if the app belongs to a guest space. (Default: `false`) 
+
+#### Response
+None
+
+#### Example
+```js
+kintoneUtility.rest.deleteCursor({ id: 1234 });
 ```
