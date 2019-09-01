@@ -1,6 +1,6 @@
 {
   "name": "@shuuji3/kintone-utility",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility library for development on Kintone platform.",
   "main": "src/js/main.js",
   "scripts": {
