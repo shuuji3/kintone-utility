@@ -26,7 +26,7 @@ Then, use `kintone-utility` from your project like the following:
 
 ```js
 // main.js
-import kintoneUtility from 'kintone-utility';
+import kintoneUtility from '@shuuji3/kintone-utility';
 
 const { records } = await kintoneUtility.rest.getAllRecordsByQuery({
   id: 1234,
