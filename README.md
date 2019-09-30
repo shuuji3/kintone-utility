@@ -3,6 +3,7 @@
 [![npm download count](https://img.shields.io/npm/dy/@shuuji3/kintone-utility.svg)](https://www.npmjs.com/package/@shuuji3/kintone-utility)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/562912d851d2491d9e85e35d2a0ddb30)](https://app.codacy.com/app/shuuji3/kintone-utility?utm_source=github.com&utm_medium=referral&utm_content=shuuji3/kintone-utility&utm_campaign=Badge_Grade_Settings)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fshuuji3%2Fkintone-utility.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fshuuji3%2Fkintone-utility?ref=badge_shield)
 
 Utility library for development on the Kintone platform.
 
@@ -71,3 +72,7 @@ $ yarn start
 
 ## Original Copyright
 Copyright(c) Cybozu, Inc.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fshuuji3%2Fkintone-utility.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fshuuji3%2Fkintone-utility?ref=badge_large)
