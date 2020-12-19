@@ -18,9 +18,9 @@ export default (api, method, param, isGuest) => {
             return false;
         }
         if (kintoneUtility.rest.guestSpaceId) {
-            const urlParts = api.split('/');
+            const urlPostfix = api.split('/').slice(2).join('/');
             return `https://${hostname}/k/guest/${kintoneUtility.rest.guestSpaceId}/`
-            + `${urlParts[2]}/${urlParts[3]}.json?_method=${_method}`;
+                + `${urlPostfix}.json?_method=${_method}`;
         } else if (!isGuest) {
             return `https://${hostname}${api}.json?_method=${_method}`;
         } else if (window && window.kintone && isGuest) {
