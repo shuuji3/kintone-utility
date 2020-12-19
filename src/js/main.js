@@ -24,6 +24,9 @@ import clearDomain from './rest/clearDomain';
 import clearGuestSpaceId from './rest/clearGuestSpaceId';
 import downloadFile from './rest/downloadFile';
 import uploadFile from './rest/uploadFile';
+import getApp from './rest/getApp';
+import getApps from './rest/getApps';
+import getAllApps from './rest/getAllApps';
 import getFormFields from './rest/getFormFields';
 import getFormLayout from './rest/getFormLayout';
 import postDeployAppSettings from './rest/postDeployAppSettings';
@@ -36,6 +39,7 @@ import deleteCursor from './rest/deleteCursor';
 
 const kintoneUtility = {
     rest: {
+        // Record
         getRecord,
         getRecords,
         getAllRecordsByQuery,
@@ -52,6 +56,11 @@ const kintoneUtility = {
         upsertRecords,
         downloadFile,
         uploadFile,
+
+        // App
+        getApp,
+        getApps,
+        getAllApps,
         getFormFields,
         getFormLayout,
         postDeployAppSettings,
@@ -59,6 +68,7 @@ const kintoneUtility = {
         getCustomization,
         updateCustomization,
 
+        // Authentication
         setBasicAuth,
         setUserAuth,
         setApiTokenAuth,
@@ -70,6 +80,7 @@ const kintoneUtility = {
         clearDomain,
         clearGuestSpaceId,
 
+        // Cursor
         postCursor,
         getCursor,
         deleteCursor
