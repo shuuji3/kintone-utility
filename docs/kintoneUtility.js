@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -107,7 +107,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _useXMLHttp = __webpack_require__(20);
+var _useXMLHttp = __webpack_require__(21);
 
 var _useXMLHttp2 = _interopRequireDefault(_useXMLHttp);
 
@@ -1491,7 +1491,7 @@ return Promise$1;
 
 //# sourceMappingURL=es6-promise.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19), __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20), __webpack_require__(8)))
 
 /***/ }),
 /* 8 */
@@ -1970,9 +1970,9 @@ exports.default = params => {
 
 
 
-var base64 = __webpack_require__(27)
-var ieee754 = __webpack_require__(28)
-var isArray = __webpack_require__(29)
+var base64 = __webpack_require__(28)
+var ieee754 = __webpack_require__(29)
+var isArray = __webpack_require__(30)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -3753,7 +3753,8 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 17 */
+/* 17 */,
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3763,7 +3764,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _getRecord = __webpack_require__(18);
+var _getRecord = __webpack_require__(19);
 
 var _getRecord2 = _interopRequireDefault(_getRecord);
 
@@ -3783,7 +3784,7 @@ var _postRecords = __webpack_require__(11);
 
 var _postRecords2 = _interopRequireDefault(_postRecords);
 
-var _postAllRecords = __webpack_require__(21);
+var _postAllRecords = __webpack_require__(22);
 
 var _postAllRecords2 = _interopRequireDefault(_postAllRecords);
 
@@ -3795,7 +3796,7 @@ var _putRecords = __webpack_require__(13);
 
 var _putRecords2 = _interopRequireDefault(_putRecords);
 
-var _putAllRecords = __webpack_require__(22);
+var _putAllRecords = __webpack_require__(23);
 
 var _putAllRecords2 = _interopRequireDefault(_putAllRecords);
 
@@ -3807,99 +3808,99 @@ var _deleteAllRecords = __webpack_require__(15);
 
 var _deleteAllRecords2 = _interopRequireDefault(_deleteAllRecords);
 
-var _deleteAllRecordsByQuery = __webpack_require__(23);
+var _deleteAllRecordsByQuery = __webpack_require__(24);
 
 var _deleteAllRecordsByQuery2 = _interopRequireDefault(_deleteAllRecordsByQuery);
 
-var _upsertRecord = __webpack_require__(24);
+var _upsertRecord = __webpack_require__(25);
 
 var _upsertRecord2 = _interopRequireDefault(_upsertRecord);
 
-var _upsertRecords = __webpack_require__(25);
+var _upsertRecords = __webpack_require__(26);
 
 var _upsertRecords2 = _interopRequireDefault(_upsertRecords);
 
-var _setBasicAuth = __webpack_require__(26);
+var _setBasicAuth = __webpack_require__(27);
 
 var _setBasicAuth2 = _interopRequireDefault(_setBasicAuth);
 
-var _setUserAuth = __webpack_require__(30);
+var _setUserAuth = __webpack_require__(31);
 
 var _setUserAuth2 = _interopRequireDefault(_setUserAuth);
 
-var _setApiTokenAuth = __webpack_require__(31);
+var _setApiTokenAuth = __webpack_require__(32);
 
 var _setApiTokenAuth2 = _interopRequireDefault(_setApiTokenAuth);
 
-var _setDomain = __webpack_require__(32);
+var _setDomain = __webpack_require__(33);
 
 var _setDomain2 = _interopRequireDefault(_setDomain);
 
-var _setGuestSpaceId = __webpack_require__(33);
+var _setGuestSpaceId = __webpack_require__(34);
 
 var _setGuestSpaceId2 = _interopRequireDefault(_setGuestSpaceId);
 
-var _clearBasicAuth = __webpack_require__(34);
+var _clearBasicAuth = __webpack_require__(35);
 
 var _clearBasicAuth2 = _interopRequireDefault(_clearBasicAuth);
 
-var _clearUserAuth = __webpack_require__(35);
+var _clearUserAuth = __webpack_require__(36);
 
 var _clearUserAuth2 = _interopRequireDefault(_clearUserAuth);
 
-var _clearApiTokenAuth = __webpack_require__(36);
+var _clearApiTokenAuth = __webpack_require__(37);
 
 var _clearApiTokenAuth2 = _interopRequireDefault(_clearApiTokenAuth);
 
-var _clearDomain = __webpack_require__(37);
+var _clearDomain = __webpack_require__(38);
 
 var _clearDomain2 = _interopRequireDefault(_clearDomain);
 
-var _clearGuestSpaceId = __webpack_require__(38);
+var _clearGuestSpaceId = __webpack_require__(39);
 
 var _clearGuestSpaceId2 = _interopRequireDefault(_clearGuestSpaceId);
 
-var _downloadFile = __webpack_require__(39);
+var _downloadFile = __webpack_require__(40);
 
 var _downloadFile2 = _interopRequireDefault(_downloadFile);
 
-var _uploadFile = __webpack_require__(40);
+var _uploadFile = __webpack_require__(41);
 
 var _uploadFile2 = _interopRequireDefault(_uploadFile);
 
-var _getFormFields = __webpack_require__(41);
+var _getFormFields = __webpack_require__(44);
 
 var _getFormFields2 = _interopRequireDefault(_getFormFields);
 
-var _getFormLayout = __webpack_require__(42);
+var _getFormLayout = __webpack_require__(45);
 
 var _getFormLayout2 = _interopRequireDefault(_getFormLayout);
 
-var _postDeployAppSettings = __webpack_require__(43);
+var _postDeployAppSettings = __webpack_require__(46);
 
 var _postDeployAppSettings2 = _interopRequireDefault(_postDeployAppSettings);
 
-var _getAppDeployStatus = __webpack_require__(44);
+var _getAppDeployStatus = __webpack_require__(47);
 
 var _getAppDeployStatus2 = _interopRequireDefault(_getAppDeployStatus);
 
-var _getCustomization = __webpack_require__(45);
+var _getCustomization = __webpack_require__(48);
 
 var _getCustomization2 = _interopRequireDefault(_getCustomization);
 
-var _updateCustomization = __webpack_require__(46);
+var _updateCustomization = __webpack_require__(49);
 
 var _updateCustomization2 = _interopRequireDefault(_updateCustomization);
 
-var _postCursor = __webpack_require__(47);
+var _postCursor = __webpack_require__(50);
 
 var _postCursor2 = _interopRequireDefault(_postCursor);
 
-var _getCursor = __webpack_require__(48);
+var _getCursor = __webpack_require__(51);
 
 var _getCursor2 = _interopRequireDefault(_getCursor);
 
-var _deleteCursor = __webpack_require__(49);
+var _deleteCursor = __webpack_require__(52);
 
 var _deleteCursor2 = _interopRequireDefault(_deleteCursor);
 
@@ -3952,7 +3953,7 @@ window.kintoneUtility = kintoneUtility;
 exports.default = kintoneUtility;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4001,7 +4002,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -4191,7 +4192,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4226,8 +4227,8 @@ exports.default = (api, method, param, isGuest) => {
             return false;
         }
         if (kintoneUtility.rest.guestSpaceId) {
-            const urlParts = api.split('/');
-            return `https://${hostname}/k/guest/${kintoneUtility.rest.guestSpaceId}/` + `${urlParts[2]}/${urlParts[3]}.json?_method=${_method}`;
+            const urlPostfix = api.split('/').slice(2).join('/');
+            return `https://${hostname}/k/guest/${kintoneUtility.rest.guestSpaceId}/` + `${urlPostfix}.json?_method=${_method}`;
         } else if (!isGuest) {
             return `https://${hostname}${api}.json?_method=${_method}`;
         } else if (window && window.kintone && isGuest) {
@@ -4347,7 +4348,7 @@ exports.default = (api, method, param, isGuest) => {
 };
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4424,7 +4425,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4501,7 +4502,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4553,7 +4554,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4621,7 +4622,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4736,7 +4737,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4765,7 +4766,7 @@ exports.default = (userName, password) => {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16).Buffer))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4923,7 +4924,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -5013,7 +5014,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -5024,7 +5025,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5053,7 +5054,7 @@ exports.default = (loginName, password) => {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(16).Buffer))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5080,7 +5081,7 @@ exports.default = apiToken => {
 };
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5107,7 +5108,7 @@ exports.default = domain => {
 };
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5134,7 +5135,7 @@ exports.default = guestSpaceId => {
 };
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5151,7 +5152,7 @@ exports.default = () => {
 };
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5168,7 +5169,7 @@ exports.default = () => {
 };
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5185,7 +5186,7 @@ exports.default = () => {
 };
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5202,7 +5203,7 @@ exports.default = () => {
 };
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5219,7 +5220,7 @@ exports.default = () => {
 };
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5264,7 +5265,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5311,7 +5312,9 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 41 */
+/* 42 */,
+/* 43 */,
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5363,7 +5366,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5411,7 +5414,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 43 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5462,7 +5465,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 44 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5508,7 +5511,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 45 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5556,7 +5559,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 46 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5632,7 +5635,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 47 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5684,7 +5687,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 48 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5729,7 +5732,7 @@ exports.default = params => {
 };
 
 /***/ }),
-/* 49 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
